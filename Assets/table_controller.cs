@@ -26,10 +26,12 @@ public class table_controller : MonoBehaviour {
 		if (visible == true) {
 			table.transform.position = new Vector2(table.transform.position.x + ((RectTransform)markwidth.transform).rect.width, table.transform.position.y);
 			visible = false;
+			Debug.Log(table.transform.position.x );
 		}
 		else {
 			table.transform.position = new Vector2(table.transform.position.x - ((RectTransform)markwidth.transform).rect.width, table.transform.position.y);
 			visible = true;
+			Debug.Log(((RectTransform)markwidth.transform).rect.width);
 		}
 	}
 
