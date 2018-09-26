@@ -7,12 +7,14 @@ using UnityEngine;
 public class answer_controller : MonoBehaviour {
 
 	public Transform btnParent;
+	public Text answer;
 	private Button[] btns;
 	private string ans = "";
 
 	// Use this for initialization
 	void Start () {
 		 btns = new Button[btnParent.childCount];
+		 answer.text = "Your answer";
 
 		 for (int i = 0; i < btns.Length; i++) {
 			 btns[i] = btnParent.GetChild(i).GetComponent<Button>();
@@ -37,6 +39,7 @@ public class answer_controller : MonoBehaviour {
 		} 
 		else if (btnName == "send_answer") {
 			Debug.Log(ans);
+			answer.text = ans;
 			ans ="";
 		}
 		
